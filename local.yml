@@ -1,0 +1,130 @@
+---
+- name: Install Core
+  hosts: all
+  connection: local
+
+  tasks:
+    - name: Update pacman
+      become: true
+      ansible.builtin.command: pacman -Syu --noconfirm
+
+    - name: Install packages
+      ansible.builtin.package:
+        name:
+          - tmux
+          - ripgrep
+          - fd
+          - fzf
+          - btop
+          - bat
+          - dua-cli
+          - duf
+          - eza
+          - less
+          - yazi
+          - man-db
+          - tldr
+          - neovim
+          - rsync
+          - toilet
+          - openssh
+
+    - name: Ensure dependencies
+      run_once: true
+      ansible.builtin.package:
+        name:
+          - base-devel
+          - git
+          - go
+        state: present
+
+    - name: Clone yay repo
+      run_once: true
+      become_user: uau
+      ansible.builtin.git:
+        repo: "https://aur.archlinux.org/yay.git"
+        dest: /home/uau/yay
+
+    - name: Build yay package
+      run_once: true
+      become_user: uau
+      become: true
+      ansible.builtin.command: makepkg -si --noconfirm
+      args:
+        chdir: /home/uau/yay
+        creates: /usr/bin/yay
+
+    - name: Remove yay directory
+      run_once: true
+      ansible.builtin.file:
+        path: /home/uau/yay
+        state: absent
+
+    - name: Install font
+      command: yay -S ttf-d2coding-nerd --noconfirm
+
+    - name: Install zsh
+      ansible.builtin.package: 
+        name: zsh
+        state: latest
+
+    - name: Change default shell
+      user:
+        name: uau
+        shell: /bin/zsh
+
+    # - name: Install oh my zsh
+    #   become_user: uau
+    #   ansible.builtin.command: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+    #
+    # - name: Install zsh-syntax-hightlist
+    #   become_user: uau
+    #   ansible.builtin.git:
+    #     repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    #     dest: "${ZSH_CUSTOM:~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+
+    - name: Install gui
+      package:
+        name:
+          - xorg-server
+          - xorg-apps
+          - xdg-user-dirs
+          - arandr
+          - awesome
+          - ly
+          - wezterm
+          - vivaldi
+          - thunar
+          - zathura
+          - mupdf
+          - zathura-pdf-mupdf
+          - celluloid
+          - ffmpeg
+          - fontconfig
+          - bitwarden
+          - rofi
+          - dmenu
+          - picom
+          - feh
+          - scim
+        state: latest
+
+    - name: Enable ly
+      systemd:
+        name: ly.service
+        state: started
+        enabled: true
+        force: true
+
+    - name: Make user dirs
+      become_user: uau
+      command: xdg-user-dirs-update
+
+    - name: Make Code directory
+      file:
+        path: /home/uau/Codes
+        state: directory
+        mode: "0755"
+
+    # - name: Clone Projects
+
