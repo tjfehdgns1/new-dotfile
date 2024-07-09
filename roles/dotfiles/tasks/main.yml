@@ -13,6 +13,6 @@
     group: uau
 
 - name: Stow .
-  command: "stow ."
+  command: "stow . --adopt"
   args:
     chdir: ~/dotfiles

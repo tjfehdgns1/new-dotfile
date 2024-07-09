@@ -30,6 +30,7 @@
     - font
     - themes
     - dotfiles
+    - ssh
 
   tasks:
     - name: Install packages
