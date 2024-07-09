@@ -1,0 +1,72 @@
+set completion-fg "#ebdbb2"
+set completion-bg "#282828"
+set completion-group-fg "#ebdbb2"
+set completion-group-bg "#282828"
+set completion-highlight-bg "#458588"
+set completion-highlight-fg "#ebdbb2"
+
+set default-fg "#ebdbb2"
+set default-bg "#282828"
+set recolor-lightcolor "#282828"
+set recolor-darkcolor "#ebdbb2"
+
+set notification-error-fg "#ebdbb2"
+set notification-error-bg "#d79921"
+set nofification-warning-fg "#ebdbb2"
+set nofification-warning-bg "#cc241d"
+
+set tabbar-fg "#ebdbb2"
+set tabbar-bg "#282828"
+set tabbar-focus-fg "#ebdbb2"
+set tabbar-focus-bg "#458588"
+
+set inputbar-fg "#ebdbb2"
+set inputbar-bg "#282828"
+
+set statusbar-bg "#282828"
+set statusbar-fg "#ebdbb2"
+
+set index-fg "#ebdbb2"
+set index-bg "#282828"
+set index-active-fg "#ebdbb2"
+set index-active-bg "#a89984"
+
+set highlight-color "#98971a"
+set highlight-active-color "#98971a"
+
+set show-scrollbars false
+set font "D2CodingLigature Nerd Font 16"
+set window-height 540
+set window-width 860
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map K zoom in
+map J zoom out
+map i recolor
+map p print
+
+# #282828
+# #cc241d
+# #98971a
+# #d79921
+# #458588
+# #b16286
+# #689d6a
+# #a89984
+#
+# #928374
+# #fb4934
+# #b8bb26
+# #fabd2f
+# #83a598
+# #d3869b
+# #8ec07c
+# #ebdbb2
+

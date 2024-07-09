@@ -1,0 +1,6 @@
+- name: Copy ssh
+  copy:
+    src: .ssh
+    dest: ~/.ssh
+    owner: uau
+    group: uau
