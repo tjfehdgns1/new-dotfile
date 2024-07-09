@@ -28,6 +28,7 @@
     - tmux
     - yay
     - font
+    - themes
     - dotfiles
 
   tasks:

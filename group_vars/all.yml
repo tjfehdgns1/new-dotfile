@@ -170,5 +170,6 @@ workstation_packages:
   - qt5ct
   - awesome
   - xorg-xinit
+  - gnome
 
 
