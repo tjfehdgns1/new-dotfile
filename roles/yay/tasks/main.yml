@@ -1,0 +1,28 @@
+- name: Check yay
+  stat:
+    path: /usr/bin/yay
+  register: yay_bin
+
+- name: Clone yay
+  git:
+    repo: "https://aur.archlinux.org/yay.git"
+    dest: ~/yay
+  when: not yay_bin.stat.path
+
+- name: Build Package
+  shell: "makepkg -si --noconfirm"
+  args:
+    chdir: ~/yay
+  when: not yay_bin.stat.path
+
+- name: Check directory
+  stat:
+    path: ~/yay
+  register: yay
+  when: not yay_bin.stat.path
+
+- name: Remove directory
+  file:
+    path: ~/yay
+    state: absent
+  when: not yay_bin.stat.path

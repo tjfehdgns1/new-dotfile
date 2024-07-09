@@ -1,0 +1,221 @@
+# Original by SeolMan
+
+# key = { fg = "#ffffff", bg = "#ffffff", underline = { color = "#ffffff", style = "curl" }, modifiers = ["bold", italic"] }
+# modifiers: bold, dim, italic, underlined, slow_blink, rapid_blink, reversed, hidden, crossed_out
+# underline style: line, curl, dashed, dotted, double_line
+
+# inherits = "default"
+
+"attribute" = { fg = "cyan" } # Class attributes, HTML tag attributes
+
+"type" = { fg = "yellow" } # Types
+# "type.builtin" = {} # Primitive types provied by the language(int, usize)
+# "type.enum" = {}
+# "type.enum.variant" = {}
+
+"constructor" = { fg = "purple" }
+
+"constant" = { fg = "cyan" }
+# "constant.builtin" = {} # Special constants provided by the language(true, false, nil)
+# "constant.character" = {}
+# "constant.numeric" = {}
+
+"string" = { fg = "green" } # "", ''
+# "string.regexp" = {}
+# "string.special" = {}
+# "string.special.path" = {}
+# "string.special.url" = {}
+# "string.special.symbol" = {}
+
+"comment" = { fg = "grey" }
+# "comment.line" = {fg = "grey"} # Single line comment(//)
+# "comment.block" = {fg = "grey"} # Block comments (/* */)
+# "comment.block.documentation" = {fg = "grey"} # Documentation comment(///)
+
+"variable" = { fg = "fg" }
+"variable.builtin" = { fg = "fg", modifiers = ["bold"] }
+# "variable.parameter" = {}
+# "variable.other" = {}
+# "variable.other.member" = {}
+
+"label" = { fg = "purple" }
+
+"punctuation" = { fg = "light_grey" }
+# "punctuation.delimiter" = {} # Commas, colons
+# "punctuation.bracket" = {} # Parentheses, angle brackets
+# "punctuation.special" = {} # String interpolation bracket
+
+"keyword" = { fg = "purple" }
+# "keyword.control" = {}
+# "keyword.control.conditional" = {}
+# "keyword.control.repeat" = {}
+# "keyword.control.import" = {}
+# "keyword.control.return" = {}
+# "keyword.control.exception" = {}
+# "keyword.operator" = {}
+# "keyword.directive" = {}
+# "keyword.function" = {}
+# "keyword.storage" = {}
+# "keyword.storage.type" = {}
+# "keyword.storage.modifier" = {}
+
+"operator" = { fg = "fg" }
+
+"function" = { fg = "purple" }
+# "function.builtin" = {}
+# "function.method" = {}
+# "function.macro" = {}
+# "function.special" = {}
+
+"tag" = { fg = "green" }
+
+"namespace" = { fg = "yellow" }
+
+"special" = { fg = "red" }
+
+"markup.normal.completion" = {}
+"markup.normal.hover" = {}
+"markup.heading" = {}
+# "markup.heading.marker" = {}
+# "markup.heading.1" = {}
+# "markup.heading.2" = {}
+# "markup.heading.3" = {}
+# "markup.heading.4" = {}
+# "markup.heading.5" = {}
+# "markup.heading.6" = {}
+"markup.heading.completion" = {}
+"markup.heading.hover" = {}
+"markup.list" = {}
+# "markup.list.unnumbered" = {}
+# "markup.list.numbered" = {}
+# "markup.list.checked" = {}
+# "markup.list.unchecked" = {}
+"markup.bold" = {}
+"markup.italic" = {}
+"markup.strikethrough" = {}
+"markup.link" = {}
+# "markup.link.url" = {}
+# "markup.link.label" = {}
+# "markup.link.text" = {}
+"markup.quote" = {}
+"markup.raw" = {}
+"markup.raw.inline" = {}
+# "markup.raw.inline.completion" = {}
+# "markup.raw.inline.hover" = {}
+# "markup.raw.inline" = {}
+# "markup.raw.block" = {}
+
+"diff.plus" = "green"
+# "diff.plus.gutter" = {}
+"diff.minus" = "red"
+# "diff.minus.gutter" = {}
+"diff.delta" = "yellow"
+# "diff.delta.gutter" = {}
+# "diff.delta.moved" = {}
+
+
+"ui.background" = {}
+"ui.background.separator" = { fg = "grey" } # Picker separator below input line
+
+"ui.cursor" = { fg = "green", modifiers = ["reversed", "slow_blink"] }
+# "ui.cursor.normal" = {}
+# "ui.cursor.insert" = {}
+# "ui.cursor.select" = {}
+"ui.cursor.match" = { fg = "yellow" } # Matching bracket etc.
+# "ui.cursor.primary" = { fg = "white", modifiers = [ "reversed", ] } # Cursor with primary selection
+# "ui.cursor.primary.normal" = {}
+# "ui.cursor.primary.insert" = {}
+# "ui.cursor.primary.select" = {}
+
+"ui.debug.breakpoint" = {} # Breakpoint indicator, found in the gutter
+"ui.debug.active" = {}     # Indicator for the line at which debugging execution is paused at, found in the gutter
+
+"ui.gutter" = { fg = "fg" } # Gutter
+# "ui.gutter.selected" = {} # Gutter for the line the cursor is on
+
+"ui.highlight.frameline" = {} # Line at which debugging execution is paused at
+
+"ui.linenr" = { fg = "grey" }          # Line numbers
+"ui.linenr.selected" = { fg = "cyan" } # Line number for the line the cursor is on
+
+"ui.statusline" = { fg = "fg" }                        # Statusline
+"ui.statusline.inactive" = { fg = "bg0", bg = "grey" } #Statusline (unfocused document)
+"ui.statusline.normal" = { fg = "bg0", bg = "green" }  #	Statusline mode during normal mode (only if editor.color-modes is enabled)
+"ui.statusline.insert" = { fg = "bg0", bg = "blue" }   #	Statusline mode during insert mode (only if editor.color-modes is enabled)
+"ui.statusline.select" = { fg = "bg0", bg = "purple" } #	Statusline mode during select mode (only if editor.color-modes is enabled)
+"ui.statusline.separator" = {}                         # Separator character in statusline
+
+"ui.bufferline" = { fg = "fg" }
+# "ui.bufferline.active" = { fg = "fg"}
+# "ui.bufferline.background" = {}
+
+"ui.popup" = { bg = "bg_d" }    #	Documentation popups (e.g. Space + k)
+"ui.popup.info" = { fg = "fg" } # Prompt for multiple key options
+
+"ui.window" = { fg = "fg" } # Borderlines separating splits
+
+"ui.help" = { fg = "fg" } # Description box for commands
+
+"ui.text" = { fg = "fg" } # Command prompts, popup text, etc.
+"ui.text.focus" = { modifiers = [
+  "bold",
+] } # The currently selected line in the picker
+# "ui.text.inactive" = {}   #	Same as ui.text but when the text is inactive (e.g. suggestions)
+"ui.text.info" = { fg = "fg" } #	The key: command text in ui.popup.info boxes
+
+"ui.virtual.ruler" = { bg = "grey" } #	Ruler columns (see the editor.rulers config)
+# "ui.virtual.whitespace" = {}           # Visible whitespace characters
+# "ui.virtual.indent-guide" = {}         # Vertical indent width guides
+# "ui.virtual.inlay-hint" = {}           # Default style for inlay hints of all kinds
+# "ui.virtual.inlay-hint.parameter" = {} # Style for inlay hints of kind parameter (LSPs are not required to set a kind)
+# "ui.virtual.inlay-hint.type" = {}      #	Style for inlay hints of kind type (LSPs are not required to set a kind)
+# "ui.virtual.wrap" = {}                 # Soft-wrap indicator (see the editor.soft-wrap config)
+
+"ui.menu" = { fg = "fg" } # Code and command completion menus
+"ui.menu.selected" = { fg = "fg", bg = "bg0", modifiers = [
+  "bold",
+] } #	Selected autocomplete item
+"ui.menu.scroll" = { fg = "fg" } #	fg sets thumb color, bg sets track color of scrollbar
+
+"ui.selection" = { bg = "green" } #	For selections in the editing area
+# "ui.selection.primary" = {}
+
+"ui.highlight" = { fg = "yellow" } #	Highlighted lines in the picker preview
+
+"ui.cursorline" = { bg = "bg1" }
+# "ui.cursorline.primary" = {}   # The line of the primary cursor (if cursorline is enabled)
+# "ui.cursorline.secondary" = {} # The lines of any other cursors (if cursorline is enabled)
+
+# "ui.cursorcolumn.primary" = {}   # The column of the primary cursor (if cursorcolumn is enabled)
+# "ui.cursorcolumn.secondary" = {} # The columns of any other cursors (if cursorcolumn is enabled)
+
+"warning" = { fg = "yellow" } # Diagnostics warning (gutter)
+"error" = { fg = "red" }      # Diagnostics error (gutter)
+"info" = { fg = "fg" }        #	Diagnostics info (gutter)
+"hint" = { fg = "blue" }      #	Diagnostics hint (gutter)
+
+# "diagnostic" = {}         #	Diagnostics fallback style (editing area)
+"diagnostic.hint" = { fg = "blue" }      # Diagnostics hint (editing area)
+"diagnostic.info" = { fg = "fg" }        # Diagnostics info (editing area)
+"diagnostic.warning" = { fg = "yellow" } #Diagnostics warning (editing area)
+"diagnostic.error" = { fg = "red" }      #	Diagnostics error (editing area)
+
+[palette]
+black = "#0c0e15"
+bg_d = "#141b24"
+bg_blue = "#54b0fd"
+bg_yellow = "#f2cc81"
+fg = "#ffffff"
+purple = "#c75ae8"
+green = "#8bcd5b"
+orange = "#dd9046"
+blue = "#41a7fc"
+yellow = "#efbd5d"
+cyan = "#34bfd0"
+red = "#f65866"
+grey = "#455574"
+light_grey = "#6c7d9c"
+dark_cyan = "#1b6a73"
+dark_red = "#992525"
+dark_yellow = "#8f610d"
+dark_purple = "#862aa1"

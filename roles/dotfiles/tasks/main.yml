@@ -1,0 +1,18 @@
+---
+- name: Ensure Stow installed
+  become: yes
+  pacman:
+    name: stow
+    state: present
+
+- name: Copy dotfiles
+  copy:
+    src: dotfiles/
+    dest: ~/dotfiles
+    owner: uau
+    group: uau
+
+- name: Stow .
+  command: "stow ."
+  args:
+    chdir: ~/dotfiles

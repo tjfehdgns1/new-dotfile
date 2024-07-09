@@ -1,0 +1,25 @@
+- name: Change default shell
+  become: true
+  user:
+    name: uau
+    shell: /bin/zsh
+
+- name: Check oh-my-zsh installed
+  stat:
+    path: ~/.oh-my-zsh
+  register: omz
+
+- name: Install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  when: not omz.stat.path
+
+- name: Check zsh-syntax-highlight installed
+  stat:
+    path: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  register: zsh
+
+- name: Install zsh-syntax-highlight
+  git:
+    repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    dest: "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+  when: not zsh.stat.path

@@ -1,0 +1,16 @@
+[[language]]
+name = "pico8-ls"
+scope = "source.p8"
+language-servers = [{ name = "pico8-ls" }]
+file-types = ["p8"]
+comment-token = "--"
+indent = { tab-width = 2, unit = "  " }
+roots = [".stylua.toml"]
+
+[language-server.pico8-ls]
+command = "pico8-ls"
+args = ["--stdio"]
+
+[[garmmar]]
+name = "pico8-ls"
+source = { git = "https://github.com/Azganoth/tree-sitter-lua", rev = "88e446476a1e97a8724dff7a23e2d709855077f2" }

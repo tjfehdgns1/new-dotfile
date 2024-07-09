@@ -1,0 +1,10 @@
+- name: Check tpm installed
+  stat:
+    path: ~/.tmux
+  register: tpm
+
+- name: Install tpm
+  git:
+    repo: "https://github.com/tmux-plugins/tpm.git"
+    dest: ~/.tmux/plugins/tpm
+  when: not tpm.stat.path

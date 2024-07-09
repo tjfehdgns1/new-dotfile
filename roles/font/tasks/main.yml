@@ -1,0 +1,8 @@
+- name: Install D2Coding
+  pacman:
+    name: 
+      - ttf-d2coding-nerd
+      - ttf-hack-nerd
+    executable: yay
+    state: latest
+    extra_args: "--noconfirm"

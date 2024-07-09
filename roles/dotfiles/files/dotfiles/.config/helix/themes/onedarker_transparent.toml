@@ -1,0 +1,159 @@
+"tag" = { fg = "red" }
+"attribute" = { fg = "yellow" }
+"comment" = { fg = "gray", modifiers = ["italic"] }
+"constant" = { fg = "cyan" }
+"constant.numeric" = { fg = "gold" }
+"constant.builtin" = { fg = "gold", modifiers = ["bold"] }
+"constant.character.escape" = { fg = "gold" }
+"constructor" = { fg = "blue" }
+"function" = { fg = "blue" }
+"function.builtin" = { fg = "blue", modifiers = ["bold"] }
+"function.macro" = { fg = "purple" }
+"keyword" = { fg = "purple" }
+"keyword.directive" = { fg = "purple" }
+"label" = { fg = "purple" }
+"namespace" = { fg = "blue" }
+"operator" = { fg = "purple" }
+"keyword.operator" = { fg = "purple" }
+"special" = { fg = "blue" }
+"string" = { fg = "green" }
+"type" = { fg = "yellow" }
+# "variable" = { fg = "blue" }
+"variable.builtin" = { fg = "red", modifiers = ["bold"] }
+"variable.parameter" = { fg = "red" }
+"variable.other.member" = { fg = "red" }
+
+"markup.heading" = { fg = "red" }
+"markup.raw.inline" = { fg = "green" }
+"markup.bold" = { fg = "gold", modifiers = ["bold"] }
+"markup.italic" = { fg = "purple", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.list" = { fg = "red" }
+"markup.quote" = { fg = "yellow" }
+"markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "purple" }
+
+
+"ui.background" = {} # NOTE: 
+# ui.background.separator	Picker separator below input line
+"ui.cursor" = { fg = "green", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "green", modifiers = [
+  "reversed",
+] } # Cursor with primary selection
+# ui.cursor.primary.normal	
+# ui.cursor.primary.insert	
+# ui.cursor.primary.select	
+"ui.cursor.match" = { fg = "blue", modifiers = [
+  "underlined",
+  "bold",
+] } # Matching bracket etc.
+# ui.cursor.select	
+"ui.debug" = { fg = "red" }
+# ui.debug.breakpoint	Breakpoint indicator, found in the gutter
+# ui.debug.active	Indicator for the line at which debugging execution is paused at, found in the gutter
+# ui.gutter	Gutter
+# ui.gutter.selected	Gutter for the line the cursor is on
+"ui.highlight" = { bg = "gray" }
+"ui.highlight.frameline" = { bg = "#97202a" }
+# ui.highlight.frameline	Line at which debugging execution is paused at
+"ui.linenr" = { fg = "linenr" } # ui.linenr	Line numbers
+"ui.linenr.selected" = { fg = "white", modifiers = [
+  "bold",
+] } # ui.linenr.selected	Line number for the line the cursor is on
+"ui.statusline" = { fg = "white" } # Statusline # NOTE:
+"ui.statusline.inactive" = { fg = "light-gray" } #Statusline (unfocused document)
+"ui.statusline.normal" = { fg = "light-black", bg = "blue", modifiers = [
+  "bold",
+] } #Statusline mode during normal mode (only if editor.color-modes is enabled)
+"ui.statusline.insert" = { fg = "light-black", bg = "green", modifiers = [
+  "bold",
+] } #Statusline mode during insert mode (only if editor.color-modes is enabled)
+"ui.statusline.select" = { fg = "light-black", bg = "purple", modifiers = [
+  "bold",
+] } #Statusline mode during select mode (only if editor.color-modes is enabled)
+"ui.bufferline" = { fg = "gray" } # NOTE:
+"ui.bufferline.active" = { fg = "white", underline = { color = "blue", style = "line" }, modifiers = [
+  "bold",
+] }
+"ui.bufferline.background" = {} # NOTE:
+"ui.help" = { fg = "white" } #	Description box for commands # NOTE:
+"ui.popup" = {} # Documentation popups (e.g. Space + k) # NOTE:
+"ui.popup.info" = {} #Prompt for multiple key options # NOTE: 
+"ui.window" = { fg = "white" } # ui.window	Borderlines separating splits
+"ui.text" = { fg = "white" } #Command prompts, popup text, etc.
+"ui.text.focus" = { fg = "white", bg = "light-black", modifiers = [
+  "bold",
+] } #The currently selected line in the picker
+# ui.text.inactive	Same as ui.text but when the text is inactive (e.g. suggestions)
+"ui.text.info" = {}                  # 	The key: command text in ui.popup.info boxes # NOTE:
+"ui.virtual" = { fg = "faint-gray" }
+"ui.virtual.indent-guide" = { fg = "faint-gray" } #Vertical indent width guides
+# "ui.virtual.whitespace" = { fg = "light-gray", underline = { style = "line" } } #Visible whitespace characters
+"ui.virtual.ruler" = { bg = "bg-d" }            # Ruler columns (see the editor.rulers config)
+"ui.virtual.inlay-hint" = { fg = "light-gray" } #Default style for inlay hints of all kinds
+# ui.virtual.inlay-hint.parameter	Style for inlay hints of kind parameter (LSPs are not required to set a kind)
+# ui.virtual.inlay-hint.type	Style for inlay hints of kind type (LSPs are not required to set a kind)
+# ui.virtual.wrap	Soft-wrap indicator (see the editor.soft-wrap config)
+"ui.menu" = { fg = "white" } #Code and command completion menus # NOTE:
+"ui.menu.selected" = { fg = "black", bg = "blue", modifiers = [
+  "bold",
+] } #Selected autocomplete item
+"ui.menu.scroll" = { fg = "white", bg = "light-gray" } #fg sets thumb color, bg sets track color of scrollbar
+"ui.selection" = { bg = "faint-gray" } #For selections in the editing area
+"ui.selection.primary" = { bg = "gray" }
+# ui.highlight	Highlighted lines in the picker preview
+"ui.cursorline.primary" = { bg = "light-black" } #The line of the primary cursor (if cursorline is enabled)
+# ui.cursorline.secondary	The lines of any other cursors (if cursorline is enabled)
+# ui.cursorcolumn.primary	The column of the primary cursor (if cursorcolumn is enabled)
+# ui.cursorcolumn.secondary	The columns of any other cursors (if cursorcolumn is enabled)
+
+"diff.plus" = "green"
+"diff.delta" = "gold"
+"diff.minus" = "red"
+
+"info" = { fg = "blue", modifiers = ["bold"] } #Diagnostics info (gutter)
+"hint" = { fg = "green", modifiers = ["bold"] } #Diagnostics hint (gutter)
+"warning" = { fg = "yellow", modifiers = [
+  "bold",
+] } #Diagnostics warning (gutter)
+"error" = { fg = "red", modifiers = ["bold"] } #Diagnostics error (gutter)
+
+# diagnostic	Diagnostics fallback style (editing area)
+"diagnostic.info" = { underline = { color = "blue", style = "line" } }      #Diagnostics info (editing area)
+"diagnostic.hint" = { underline = { color = "green", style = "line" } }     #Diagnostics hint (editing area)
+"diagnostic.warning" = { underline = { color = "yellow", style = "line" } } #Diagnostics warning (editing area)
+"diagnostic.error" = { underline = { color = "red", style = "line" } }      #Diagnostics error (editing area)
+
+
+[palette]
+black = "#0c0e15"
+light-black = "#2C323C"
+bg0 = "#1a212e"
+bg1 = "#21283b"
+bg2 = "#283347"
+bg3 = "#2a324a"
+bg-d = "#141b24"
+bg-blue = "#54b0fd"
+bg-yellow = "#f2cc81"
+# white = "#93a4c3"
+white = "#ffffff"
+purple = "#c75ae8"
+green = "#8bcd5b"
+orange = "#dd9046"
+blue = "#41a7fc"
+yellow = "#efbd5d"
+gold = "#D19A66"
+cyan = "#34bfd0"
+red = "#f65866"
+gray = "#455574"
+faint-gray = "#3B4048"
+light-gray = "#6c7d9c"
+dark-cyan = "#1b6a73"
+dark-red = "#992525"
+dark-yellow = "#8f610d"
+dark-purple = "#862aa1"
+diff-add = "#27341c"
+diff-delete = "#331c1e"
+diff-change = "#102b40"
+diff-text = "#1c4a6e"
+linenr = "#4B5263"

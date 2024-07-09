@@ -1,0 +1,24 @@
+- name: Install colorscheme
+  pacman:
+    name:
+      - gruvbox-gtk-theme-git
+    executable: yay
+    state: latest
+    extra_args: "--noconfirm"
+
+- name: Install icon theme
+  pacman:
+    name:
+      - gruvbox-plus-icon-theme
+    executable: yay
+    state: latest
+    extra_args: "--noconfirm"
+
+- name: Install cursor theme
+  pacman:
+    name:
+      - xcursor-simp1e-gruvbox-dark
+    state: latest
+    extra_args: "--noconfirm"
+    executable: yay
+

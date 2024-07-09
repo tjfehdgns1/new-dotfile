@@ -1,0 +1,116 @@
+theme = "onedarker_transparent"
+
+
+[editor]
+line-number = "relative"
+mouse = true
+scrolloff = 10
+rulers = [80, 120]
+bufferline = "multiple"
+completion-replace = true
+cursorline = true
+color-modes = true
+true-color = true
+undercurl = true
+auto-format = true
+auto-pairs = false
+auto-save = true
+
+[editor.indent-guides]
+character = "╎" # "|", "╎", "┆", "┊", "⸽"
+render = true
+skip-levels = 1
+
+[editor.lsp]
+display-messages = true
+
+[editor.file-picker]
+hidden = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# mode, spinner, file-name, file-base-name, file-modification-indicator, file-encoding
+# read-only-indicator, total-line-numbers, file-type, diagnositcs, workspace-diagnostic
+# selections, primary-selection-length, position, separator, spacer, version-control, register
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "read-only-indicator",
+  "file-base-name",
+  "file-modification-indicator",
+]
+center = [
+  "register",
+]
+right = [
+  "diagnostics",
+  "position",
+  "total-line-numbers",
+  "position-percentage",
+  "spacer",
+  "separator",
+  "file-type",
+  "spinner",
+]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.normal]
+C-u = ["half_page_up", "goto_window_center"]
+C-d = ["half_page_down", "goto_window_center"]
+X = ["extend_line_up", "extend_to_line_bounds"]
+c = "change_selection_noyank"
+G = "goto_last_line"
+C-s = ":write"
+esc = ["collapse_selection"]
+ret = ["open_below", "normal_mode"]
+"=" = ":format"
+
+[keys.select]
+X = ["extend_line_up", "extend_to_line_bounds"]
+c = "change_selection_noyank"
+G = "goto_last_line"
+
+[keys.insert]
+j = { k = "normal_mode" }
+"C-space" = "completion"
+"C-backspace" = [
+  "collapse_selection",
+  "extend_prev_word_end",
+  "delete_selection",
+] # WARN: NOT WORKING
+
+[keys.normal.space]
+# G = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80% -h80% -E lazygit" # Git
+# e = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80% -h80% -E lf"      # File Manager
+# space = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80% -h80%"
+tab = "goto_last_accessed_file"
+c = "toggle_comments"
+
+[keys.normal.space.w]
+q = ":buffer-close"
+o = ":buffer-close-others"
+Q = "wclose"
+O = "wonly"
+
+[keys.normal.g]
+e = "no_op"
+a = "no_op"
+m = "no_op"
+"." = "no_op"
+f = "no_op"
+t = "no_op"
+c = "no_op"
+j = "no_op"
+k = "no_op"
+
+# TODO: Code Runner
+# TODO: Diff
+# TODO: Copilot
